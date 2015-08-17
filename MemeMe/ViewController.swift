@@ -61,9 +61,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //Function that allows a user to pick an image to use either from their photo library or from their camera
     @IBAction func pickImage(sender: UIBarButtonItem) {
         
+        //Creates an new imagePickerController as assigns this viewController to be its delegate
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
+        //Checks the title of the sender and displays either the PhotoLibrary or Camera accordingly
         if sender.title == "Album" {
             imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             presentViewController(imagePicker, animated: true, completion: nil)
