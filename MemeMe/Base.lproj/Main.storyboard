@@ -60,8 +60,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Jko-6L-idj" secondAttribute="trailing" constant="-16" id="AoD-sA-Fme"/>
                             <constraint firstItem="2Ju-Z0-zyq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BCo-R0-MyQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hOf-WA-pR1" secondAttribute="bottom" id="CG3-ic-m4z"/>
-                            <constraint firstItem="Jko-6L-idj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DeO-g3-FfX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hOf-WA-pR1" secondAttribute="trailing" constant="-16" id="ElG-Y1-WNg"/>
+                            <constraint firstItem="Jko-6L-idj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="Irf-Kk-Hln"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bYt-C2-qzd" secondAttribute="trailing" constant="-16" id="P3P-dx-3Na"/>
                             <constraint firstItem="bYt-C2-qzd" firstAttribute="top" secondItem="2Ju-Z0-zyq" secondAttribute="bottom" id="aH8-ih-Tuf"/>
                             <constraint firstItem="hOf-WA-pR1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="bCg-TH-OIx"/>
