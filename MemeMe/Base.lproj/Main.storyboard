@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,6 +20,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hOf-WA-pR1">
                                 <rect key="frame" x="0.0" y="28" width="600" height="572"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BH4-8j-Nhd" userLabel="Top text input">
+                                <rect key="frame" x="16" y="64" width="568" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ju-Z0-zyq" userLabel="Bottom text input">
+                                <rect key="frame" x="16" y="508" width="568" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jko-6L-idj" userLabel="Top toolbar">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="gP0-Xr-mms" userLabel="Share">
+                                        <connections>
+                                            <action selector="shareMemedImage:" destination="BYZ-38-t0r" id="l9u-qb-XDz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYt-C2-qzd" userLabel="Bottom toolbar">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
@@ -35,22 +55,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BH4-8j-Nhd" userLabel="Top text input">
-                                <rect key="frame" x="16" y="72" width="568" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ju-Z0-zyq" userLabel="Bottom text input">
-                                <rect key="frame" x="16" y="509" width="568" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jko-6L-idj" userLabel="Top toolbar">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="action" id="gP0-Xr-mms"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -59,9 +63,9 @@
                             <constraint firstItem="bYt-C2-qzd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="4ZN-q4-TZA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jko-6L-idj" secondAttribute="trailing" constant="-16" id="AoD-sA-Fme"/>
                             <constraint firstItem="2Ju-Z0-zyq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BCo-R0-MyQ"/>
+                            <constraint firstItem="Jko-6L-idj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" symbolic="YES" id="BM4-Q3-J6R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hOf-WA-pR1" secondAttribute="bottom" id="CG3-ic-m4z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hOf-WA-pR1" secondAttribute="trailing" constant="-16" id="ElG-Y1-WNg"/>
-                            <constraint firstItem="Jko-6L-idj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="Irf-Kk-Hln"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bYt-C2-qzd" secondAttribute="trailing" constant="-16" id="P3P-dx-3Na"/>
                             <constraint firstItem="bYt-C2-qzd" firstAttribute="top" secondItem="2Ju-Z0-zyq" secondAttribute="bottom" id="aH8-ih-Tuf"/>
                             <constraint firstItem="hOf-WA-pR1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="bCg-TH-OIx"/>
@@ -74,9 +78,12 @@
                     </view>
                     <connections>
                         <outlet property="bottomTextInput" destination="2Ju-Z0-zyq" id="mMW-cy-nYb"/>
+                        <outlet property="bottomToolbar" destination="bYt-C2-qzd" id="C2G-RJ-M7Q"/>
                         <outlet property="cameraButton" destination="dwi-Cr-v1i" id="h6c-T7-upS"/>
                         <outlet property="memeImageView" destination="hOf-WA-pR1" id="jPX-nR-bpK"/>
+                        <outlet property="shareButton" destination="gP0-Xr-mms" id="AxW-UZ-VkP"/>
                         <outlet property="topTextInput" destination="BH4-8j-Nhd" id="Khi-wo-wY1"/>
+                        <outlet property="topToolbar" destination="Jko-6L-idj" id="zkA-PS-Fjz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
