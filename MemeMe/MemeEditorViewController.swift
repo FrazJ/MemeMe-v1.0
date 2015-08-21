@@ -73,12 +73,13 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     /* Observer subscription functions */
     
-    //Function that adds this ViewController as an observer for keyboardNotifications 
+    //Function that adds this ViewController as an observer for keyboard notifications 
     func subscribeToKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
+    //Function that removes this ViewController as an observer for keyboard notifications
     func unsubscribeFromKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
@@ -136,7 +137,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     
-    /* Keyboard fucntions */
+    /* TextField and Keyboard fucntions */
     
     //Function that raises the view up out the way of the keyboard
     func keyboardWillShow(notification: NSNotification) {
